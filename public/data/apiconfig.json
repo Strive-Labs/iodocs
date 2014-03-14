@@ -1,4 +1,13 @@
 {
+    "theravid": {
+        "name": "TheraVid v1 API",
+        "protocol": "http",
+        "baseURL": "www.theravid.com",
+        "publicPath": "/api",
+        "privatePath": "/v1",
+        "auth": "key",
+        "keyParam": "api_key"
+    },
     "klout": {
         "name": "Klout v2 API",
         "protocol": "http",
