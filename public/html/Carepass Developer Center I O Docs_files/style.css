@@ -1,0 +1,686 @@
+/* Colors */
+/* Mixins */
+/*
+  Setting colors for a method container, the form, and http method indicator
+*/
+/*
+  font-family for monospace
+*/
+/* line 37, scss/style.scss */
+input,
+select {
+  vertical-align: middle;
+}
+
+/* line 44, scss/style.scss */
+pre,
+code,
+kbd,
+samp {
+  font-family: 'Inconsolata', 'Monaco', 'Consolas', 'Bitstream Vera Mono', monospace;
+}
+
+/* line 48, scss/style.scss */
+a:link {
+  -webkit-tap-highlight-color: #ff5e99;
+}
+
+/* line 53, scss/style.scss */
+a:hover,
+a:active {
+  outline: none;
+}
+
+/* line 59, scss/style.scss */
+a,
+a:active,
+a:visited {
+  color: #607890;
+}
+
+/* line 63, scss/style.scss */
+a:hover {
+  color: #036;
+}
+
+/* line 68, scss/style.scss */
+ul,
+ol {
+  margin-left: 2em;
+}
+
+/* line 72, scss/style.scss */
+ol {
+  list-style-type: decimal;
+}
+
+/* line 77, scss/style.scss */
+nav ul,
+nav li {
+  margin: 0;
+  list-style: none;
+  list-style-image: none;
+}
+
+/* line 83, scss/style.scss */
+small {
+  font-size: 85%;
+}
+
+/* line 88, scss/style.scss */
+strong,
+th {
+  font-weight: bold;
+}
+
+/* line 92, scss/style.scss */
+td {
+  vertical-align: top;
+}
+
+/* line 96, scss/style.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 15px;
+}
+
+/* line 103, scss/style.scss */
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+/* line 107, scss/style.scss */
+input[type="checkbox"] {
+  vertical-align: bottom;
+}
+
+/* line 115, scss/style.scss */
+label,
+input[type="button"],
+input[type="submit"],
+input[type="image"],
+button {
+  cursor: pointer;
+}
+
+/* line 122, scss/style.scss */
+button,
+input,
+select,
+textarea {
+  width: auto;
+  overflow: visible;
+  margin: 0;
+}
+
+/* line 128, scss/style.scss */
+textarea {
+  overflow: auto;
+}
+
+/* line 133, scss/style.scss */
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 139, scss/style.scss */
+input:invalid,
+textarea:invalid {
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+  -webkit-box-shadow: 0, 0, 5px, red;
+  -moz-box-shadow: 0, 0, 5px, red;
+  box-shadow: 0, 0, 5px, red;
+}
+
+/* line 145, scss/style.scss */
+input:invalid,
+textarea:invalid {
+  background-color: #f0dddd;
+}
+
+/* line 149, scss/style.scss */
+h1 {
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* line 155, scss/style.scss */
+h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* line 160, scss/style.scss */
+ul {
+  margin: 0;
+}
+
+/* line 164, scss/style.scss */
+li {
+  list-style: none;
+  margin-left: 0;
+}
+
+/* line 169, scss/style.scss */
+.servicesIodocs {
+  overflow: hidden;
+  *zoom: 1;
+  margin: 15px 0px;
+}
+/* line 174, scss/style.scss */
+.servicesIodocs h2 {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  position: relative;
+  background: url(/public/Mashery/images/Iodocs/arrow.png) no-repeat 98% 50%;
+  border: 1px solid #eee;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+/* line 181, scss/style.scss */
+.servicesIodocs h2:hover {
+  background-image: url(/public/Mashery/images/Iodocs/arrow-hover.png);
+  border-color: #aaa;
+  border-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+/* line 188, scss/style.scss */
+.servicesIodocs h2 span {
+  padding: 5px 0 0 5px;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+/* line 196, scss/style.scss */
+.servicesIodocs select {
+  position: absolute;
+  z-index: 10;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  top: 0px;
+  left: 0px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -moz-appearance: window;
+  background-color: transparent;
+  font-weight: bold;
+  padding: 5px 0 5px 5px;
+  border: 0;
+}
+/* line 209, scss/style.scss */
+.servicesIodocs select:focus {
+  outline: 0;
+}
+/* line 213, scss/style.scss */
+.servicesIodocs select:hover {
+  cursor: pointer;
+}
+/* line 217, scss/style.scss */
+.servicesIodocs select::moz-focus-inner {
+  outline: 0;
+}
+/* line 228, scss/style.scss */
+.servicesIodocs p {
+  margin-bottom: 10px;
+}
+
+/* line 233, scss/style.scss */
+#apiInfo {
+  margin: 15px 0px;
+}
+
+/* line 237, scss/style.scss */
+.credentials {
+  display: none;
+  background-color: #F4F4CB;
+  border: 1px solid #d9d94d;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  overflow: hidden;
+  *zoom: 1;
+  padding: 5px 15px;
+  margin: 0;
+}
+/* line 246, scss/style.scss */
+.credentials div {
+  margin: 0px 0px 5px 0px;
+}
+/* line 250, scss/style.scss */
+.credentials h2 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  border: 0;
+  background: transparent none;
+}
+/* line 258, scss/style.scss */
+.credentials h2 img {
+  margin-left: 10px;
+}
+/* line 263, scss/style.scss */
+.credentials label {
+  line-height: 25px;
+  font-size: 15px;
+  font-weight: bold;
+  display: block;
+  float: left;
+  padding-right: 5px;
+}
+/* line 272, scss/style.scss */
+.credentials input {
+  width: 200px;
+}
+/* line 276, scss/style.scss */
+.credentials select {
+  padding: 2px;
+  height: 25px;
+  font-size: 15px;
+  margin-right: 5px;
+}
+/* line 286, scss/style.scss */
+.credentials #apiKeyContainer,
+.credentials #apiSecretContainer,
+.credentials #apiKeySecretListContainer,
+.credentials #apiOAuth2PresetKeysContainer {
+  overflow: hidden;
+  *zoom: 1;
+  display: none;
+}
+/* line 290, scss/style.scss */
+.credentials #apiKeyContainer #showManualKeySecret,
+.credentials #apiSecretContainer #showManualKeySecret,
+.credentials #apiKeySecretListContainer #showManualKeySecret,
+.credentials #apiOAuth2PresetKeysContainer #showManualKeySecret {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* line 300, scss/style.scss */
+div.oauth2 label {
+  width: 150px;
+}
+/* line 304, scss/style.scss */
+div.oauth2 #apiAuthTypeOAuth2Container label {
+  width: 150px;
+}
+/* line 312, scss/style.scss */
+div.oauth2 #apiOAuth2AuthClientCredExchangeButton,
+div.oauth2 #apiOAuth2AuthPassCredExchangeButton,
+div.oauth2 #apiOAuth2ImplicitExchangeButton,
+div.oauth2 #apiOAuth2AuthClientCredExchangeButton,
+div.oauth2 #apiOAuth2AuthExchangeButton {
+  line-height: 20px;
+}
+/* line 316, scss/style.scss */
+div.oauth2 hr {
+  border: 0px;
+  display: block;
+  margin: 10px 0px;
+  height: 1px;
+  width: 100%;
+  background-color: #d9d94d;
+}
+
+/* line 326, scss/style.scss */
+#controls {
+  overflow: hidden;
+  *zoom: 1;
+  margin-top: 10px;
+  border: 1px solid #999;
+  border-width: 1px 0;
+  padding: 10px 0;
+  display: none;
+}
+/* line 334, scss/style.scss */
+#controls li {
+  margin: 0;
+  padding: 0 10px;
+  border-left: 1px solid #ddd;
+  float: left;
+}
+/* line 340, scss/style.scss */
+#controls li.first {
+  border-left: 0;
+  padding-left: 0;
+}
+
+/* line 347, scss/style.scss */
+.endpointList {
+  display: none;
+}
+
+/* line 352, scss/style.scss */
+.apiDescriptionList table, .method table {
+  background: transparent none;
+  border: 0;
+  padding: 0;
+  margin: 10px 0 15px;
+  width: 100%;
+}
+/* line 360, scss/style.scss */
+.apiDescriptionList tr.required, .method tr.required {
+  font-weight: bold;
+}
+/* line 364, scss/style.scss */
+.apiDescriptionList th, .method th {
+  font-weight: bold;
+  text-align: left;
+}
+/* line 369, scss/style.scss */
+.apiDescriptionList th, .method th, .apiDescriptionList td, .method td {
+  padding: 5px;
+  vertical-align: middle;
+  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-width: 0 0 1px 0;
+  border-bottom: 1px solid;
+}
+/* line 381, scss/style.scss */
+.apiDescriptionList td.name, .method td.name,
+.apiDescriptionList td.value,
+.method td.value,
+.apiDescriptionList td.type,
+.method td.type,
+.apiDescriptionList pre,
+.method pre {
+  font-family: 'Inconsolata', 'Monaco', 'Consolas', 'Bitstream Vera Mono', monospace;
+}
+/* line 387, scss/style.scss */
+.apiDescriptionList td .description, .method td .description,
+.apiDescriptionList td .type,
+.method td .type {
+  font-size: 12px;
+}
+/* line 392, scss/style.scss */
+.apiDescriptionList h2, .method h2 {
+  margin-top: 15px;
+  margin-bottom: 3px;
+}
+/* line 397, scss/style.scss */
+.apiDescriptionList h4, .method h4 {
+  margin-top: 15px;
+  margin-bottom: 3px;
+  font-size: 14px;
+  font-weight: normal;
+}
+/* line 403, scss/style.scss */
+.apiDescriptionList h4 a.select-all, .method h4 a.select-all {
+  font-size: 12px;
+  margin-left: 15px;
+}
+/* line 409, scss/style.scss */
+.apiDescriptionList ul, .method ul, .apiDescriptionList ol, .method ol, .apiDescriptionList li, .method li {
+  list-style: disc;
+}
+
+/* line 414, scss/style.scss */
+.apiDescriptionList {
+  display: none;
+}
+/* line 416, scss/style.scss */
+.apiDescriptionList h2 {
+  background: none;
+  border: none;
+}
+/* line 420, scss/style.scss */
+.apiDescriptionList h2:hover {
+  background-image: none;
+  border: none;
+  cursor: auto;
+}
+
+/* line 430, scss/style.scss */
+.endpoint {
+  margin: 0;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 435, scss/style.scss */
+.endpoint > .title {
+  padding: 20px 0 10px;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 439, scss/style.scss */
+.endpoint > .title .name {
+  font-size: 18px;
+}
+/* line 442, scss/style.scss */
+.endpoint > .title .name:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+/* line 448, scss/style.scss */
+.endpoint > .title .actions {
+  float: right;
+}
+/* line 451, scss/style.scss */
+.endpoint > .title .actions li {
+  float: left;
+  padding: 0 10px;
+  margin: 0;
+  line-height: 1.2;
+  border-left: 1px solid #ddd;
+  font-size: 14px;
+  font-weight: normal;
+}
+/* line 461, scss/style.scss */
+.endpoint > .title .actions li:first-child {
+  border: 0;
+}
+
+/* line 468, scss/style.scss */
+.method {
+  font-size: 14px;
+  border: 1px solid #eee;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  margin: 10px 0;
+  /*    &.authrequired .http-method {
+          background-image: url(/images/lock.png);
+          background-repeat: no-repeat;
+          background-position: 7px 50%;
+      }*/
+}
+/* line 474, scss/style.scss */
+.method .title {
+  overflow: hidden;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 478, scss/style.scss */
+.method .title:hover {
+  background-color: #fdfdfd;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+/* line 483, scss/style.scss */
+.method .title:hover span {
+  text-decoration: underline;
+}
+/* line 486, scss/style.scss */
+.method .title:hover span.http-method {
+  text-decoration: none;
+}
+/* line 493, scss/style.scss */
+.method .title span {
+  margin: 0 10px 0;
+  line-height: 33px;
+  float: left;
+}
+/* line 499, scss/style.scss */
+.method .title .name {
+  font-size: 16px;
+}
+/* line 503, scss/style.scss */
+.method .title .description {
+  float: right;
+  font-size: 12px;
+  text-align: right;
+}
+/* line 509, scss/style.scss */
+.method .title .uri {
+  opacity: 0.8;
+}
+/* line 513, scss/style.scss */
+.method .title .http-method {
+  padding: 0 10px;
+  width: 40px;
+  font-size: 12px;
+  text-align: center;
+  margin: 0;
+  font-family: 'Inconsolata', 'Monaco', 'Consolas', 'Bitstream Vera Mono', monospace;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  color: #fff;
+  line-height: 33px;
+  float: left;
+}
+/* line 535, scss/style.scss */
+.method form {
+  clear: both;
+  margin: 0;
+  background: transparent none;
+  padding: 15px;
+  display: none;
+}
+/* line 545, scss/style.scss */
+.method a.clear-results {
+  color: red;
+  margin-left: 20px;
+  font-size: 12px;
+}
+/* line 550, scss/style.scss */
+.method a.clear-results:hover {
+  background-color: red;
+  color: #fff;
+}
+/* line 558, scss/style.scss */
+.method .result pre {
+  font-size: 12px;
+  overflow: auto;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #fdfdfd;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+}
+/* line 566, scss/style.scss */
+.method .result pre.response {
+  max-height: 500px;
+}
+/* line 570, scss/style.scss */
+.method .result pre.error {
+  background-color: rgba(255, 245, 245, 0.9);
+  border-color: rgba(255, 100, 100, 0.5);
+}
+/* line 575, scss/style.scss */
+.method .result pre.prettyprint {
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+/* line 587, scss/style.scss */
+.method .error pre {
+  font-size: 12px;
+  overflow: auto;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #fdfdfd;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+}
+/* line 595, scss/style.scss */
+.method .error pre.response {
+  max-height: 500px;
+}
+/* line 599, scss/style.scss */
+.method .error pre.error {
+  background-color: rgba(255, 245, 245, 0.9);
+  border-color: rgba(255, 100, 100, 0.5);
+}
+/* line 604, scss/style.scss */
+.method .error pre.prettyprint {
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* line 15, scss/style.scss */
+.get {
+  background: #e7f0f7;
+  border-color: #aecce4;
+}
+/* line 19, scss/style.scss */
+.get .http-method {
+  background-color: #0061ac;
+}
+/* line 23, scss/style.scss */
+.get th, .get td {
+  border-bottom: 1px solid #9ac0de;
+}
+
+/* line 15, scss/style.scss */
+.post {
+  background: #e7f6ec;
+  border-color: #afe1c0;
+}
+/* line 19, scss/style.scss */
+.post .http-method {
+  background-color: #04a73a;
+}
+/* line 23, scss/style.scss */
+.post th, .post td {
+  border-bottom: 1px solid #9ddab1;
+}
+
+/* line 15, scss/style.scss */
+.put {
+  background: #f9f2e9;
+  border-color: #e9cead;
+}
+/* line 19, scss/style.scss */
+.put .http-method {
+  background-color: #b06300;
+}
+/* line 23, scss/style.scss */
+.put th, .put td {
+  border-bottom: 1px solid #e3c399;
+}
+
+/* line 15, scss/style.scss */
+.delete {
+  background: #f5e8e8;
+  border-color: #deb3b3;
+}
+/* line 19, scss/style.scss */
+.delete .http-method {
+  background-color: #a20909;
+}
+/* line 23, scss/style.scss */
+.delete th, .delete td {
+  border-bottom: 1px solid #d6a1a1;
+}

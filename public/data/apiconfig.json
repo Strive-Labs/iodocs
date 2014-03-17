@@ -1,6 +1,6 @@
 {
     "theravid": {
-        "name": "TheraVid v1 API",
+        "name": "StriveHub v1 API",
         "protocol": "http",
         "baseURL": "www.theravid.com",
         "publicPath": "/api",
