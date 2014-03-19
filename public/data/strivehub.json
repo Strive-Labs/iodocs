@@ -1,0 +1,236 @@
+{
+   "endpoints":[
+      {        
+         "name":"Identity: Patient",
+         "methods":[
+            {
+               "MethodName":"addPatient",
+               "Synopsis":"Adds a new patient to TheraVid.",
+               "HTTPMethod":"POST",
+               "URI":"",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"patient_id",
+                     "Required":"Y",
+                     "Default":"548768",
+                     "Type":"string",
+                     "Description":"The patient ID from the provider EHR." 
+                  },
+                  {
+                     "Name":"first_name",
+                     "Required":"Y",
+                     "Default":"Bob",
+                     "Type":"string",
+                     "Description":"The first name of the patient."
+                  },
+                  {
+                     "Name":"last_name",
+                     "Required":"Y",
+                     "Default":"Jones",
+                     "Type":"string",
+                     "Description":"The last name of the patient."
+                  },
+                  {
+                     "Name":"email",
+                     "Required":"Y",
+                     "Default":"jones@example.com",
+                     "Type":"string",
+                     "Description":"The email of the patient."
+                  },
+                  {
+                     "Name":"birthday",
+                     "Required":"Y",
+                     "Default":"12/12/2012",
+                     "Type":"string",
+                     "Description":"The birthday of the patient."
+                  }
+               ]
+            }
+         ]
+      },
+      {        
+         "name":"Identity: Provider",
+         "methods":[
+
+         ]
+      },
+      {        
+         "name":"Identity: Company",
+         "methods":[
+
+         ]
+      },
+      {        
+         "name":"Identity: Clinic",
+         "methods":[
+
+         ]
+      },
+      {        
+         "name":"Objective: Strength",
+         "methods":[
+
+         ]
+      },
+      {        
+         "name":"Objective: Flexibility",
+         "methods":[
+  
+         ]
+      },
+      {        
+         "name":"Pain Methods",
+         "methods":[
+  
+         ]
+      },
+      {        
+         "name":"FOS Methods",
+         "methods":[
+ 
+         ]
+      },
+      {        
+         "name":"Goal Methods",
+         "methods":[
+   
+         ]
+      },
+      {        
+         "name":"Workout Methods",
+         "methods":[
+            {
+               "MethodName":"addWorkout",
+               "Synopsis":"Updates the most recent work info for the specified user.",
+               "HTTPMethod":"POST",
+               "URI":"",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"patient_id",
+                     "Required":"Y",
+                     "Default":"382",
+                     "Type":"string",
+                     "Description":"The user to retrieve a careplan for." 
+                  }
+               ]
+            }
+         ]
+      },
+      {        
+         "name":"PatientPain Methods",
+         "methods":[
+            {
+               "MethodName":"addPainReport",
+               "Synopsis":"Updates the pain report for a specified user.",
+               "HTTPMethod":"POST",
+               "URI":"",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"patient_id",
+                     "Required":"Y",
+                     "Default":"382",
+                     "Type":"string",
+                     "Description":"The user to retrieve a careplan for." 
+                  }
+               ]
+            }
+         ]
+      },
+      {        
+         "name":"PatientFOS Methods",
+         "methods":[
+
+         ]
+      },
+      {        
+         "name":"Reminder Methods",
+         "methods":[
+
+         ]
+      },
+      {        
+         "name":"VideoViewed Methods",
+         "methods":[
+ 
+         ]
+      },
+      {        
+         "name":"Message Methods",
+         "methods":[
+  
+         ]
+      },    
+      {        
+         "name":"Routine Methods",
+         "methods":[
+            {
+               "MethodName":"getRoutines",
+               "Synopsis":"Gets the current exercise routine components for the specified user.",
+               "HTTPMethod":"GET",
+               "URI":"",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"patient_id",
+                     "Required":"Y",
+                     "Default":"382",
+                     "Type":"string",
+                     "Description":"The user to retrieve a careplan for." 
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name":"Appointment Methods",
+         "methods":[
+            {
+               "MethodName":"getAppointments",
+               "Synopsis":"Gets the next scheduled appointment for the specified user.",
+               "HTTPMethod":"GET",
+               "URI":"",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"patient_id",
+                     "Required":"Y",
+                     "Default":"382",
+                     "Type":"string",
+                     "Description":"The user to retrieve a careplan for." 
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name":"Insurance Methods",
+         "methods":[
+            {
+               "MethodName":"getInsurancePlan",
+               "Synopsis":"Gets the insruance plan for the specified user.",
+               "HTTPMethod":"GET",
+               "URI":"",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"patient_id",
+                     "Required":"Y",
+                     "Default":"382",
+                     "Type":"string",
+                     "Description":"The user to retrieve a careplan for." 
+                  }
+               ]
+            }
+         ]
+      },
+      {        
+         "name":"Payment Methods",
+         "methods":[
+
+         ]
+      }
+   ]
+}
