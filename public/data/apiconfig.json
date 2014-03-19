@@ -2,9 +2,9 @@
     "strivehub": {
         "name": "StriveHub v1 API",
         "protocol": "http",
-        "baseURL": "www.theravid.com",
+        "baseURL": "www.tv.com",
         "publicPath": "/api",
-        "privatePath": "/v1",
+        "privatePath": "",
         "auth": "key",
         "keyParam": "api_key"
     },

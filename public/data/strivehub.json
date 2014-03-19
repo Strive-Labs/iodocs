@@ -364,13 +364,34 @@
                "MethodName":"Current Routine",
                "Synopsis":"Get the current home exercise routine for the specified user.",
                "HTTPMethod":"GET",
-               "URI":"/hep/routines",
+               "URI":"/routines.php",
                "RequiresOAuth":"N",
                "parameters":[
                   {
-                     "Name":"patient_id",
+                     "Name":"customer_key",
                      "Required":"Y",
                      "Default":"382",
+                     "Type":"string",
+                     "Description":"The customer key for identification" 
+                  },
+                  {
+                     "Name":"action",
+                     "Required":"Y",
+                     "Default":"read",
+                     "Type":"string",
+                     "Description":"CRUD Action" 
+                  },
+                                    {
+                     "Name":"controller",
+                     "Required":"Y",
+                     "Default":"routines",
+                     "Type":"string",
+                     "Description":"The controller for action processing" 
+                  },
+                  {
+                     "Name":"patient_id",
+                     "Required":"Y",
+                     "Default":"1215",
                      "Type":"string",
                      "Description":"The user to retrieve the routine for." 
                   }
