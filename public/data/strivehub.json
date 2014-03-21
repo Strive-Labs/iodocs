@@ -7,7 +7,7 @@
                "MethodName":"Patient",
                "Synopsis":"Get patient identity profile",
                "HTTPMethod":"GET",
-               "URI":"/identity/patient",
+               "URI":"/identity/patients",
                "RequiresOAuth":"N",
                "parameters":[
                ]
@@ -16,7 +16,7 @@
                "MethodName":"Provider",
                "Synopsis":"Get provider identity profile",
                "HTTPMethod":"GET",
-               "URI":"/identity/provider",
+               "URI":"/identity/providers",
                "RequiresOAuth":"N",
                "parameters":[
                ]
@@ -25,7 +25,7 @@
                "MethodName":"Company",
                "Synopsis":"Get company identity profile",
                "HTTPMethod":"GET",
-               "URI":"/identity/company",
+               "URI":"/identity/companies",
                "RequiresOAuth":"N",
                "parameters":[
                ]
@@ -34,7 +34,7 @@
                "MethodName":"Clinic",
                "Synopsis":"Get clinic identity profile",
                "HTTPMethod":"GET",
-               "URI":"/identity/clinic",
+               "URI":"/identity/clinics",
                "RequiresOAuth":"N",
                "parameters":[
                ]
@@ -43,7 +43,7 @@
                "MethodName":"Add Patient",
                "Synopsis":"Add a new patient",
                "HTTPMethod":"POST",
-               "URI":"/identity/patient",
+               "URI":"/identity/patients",
                "RequiresOAuth":"N",
                "parameters":[
                   {
@@ -87,7 +87,7 @@
                "MethodName":"Add Provider",
                "Synopsis":"Add a new provider",
                "HTTPMethod":"POST",
-               "URI":"/identity/provider",
+               "URI":"/identity/providers",
                "RequiresOAuth":"N",
                "parameters":[
                ]
@@ -96,14 +96,14 @@
                "MethodName":"Add Company",
                "Synopsis":"Add a new company",
                "HTTPMethod":"POST",
-               "URI":"/identity/company",
+               "URI":"/identity/companies",
                "RequiresOAuth":"N",
                "parameters":[
                ]
             },
             {
                "MethodName":"Add Clinic",
-               "Synopsis":"Add a new clinic",
+               "Synopsis":"Add a new clinics",
                "HTTPMethod":"POST",
                "URI":"/identity/clinic",
                "RequiresOAuth":"N",
@@ -114,7 +114,7 @@
                "MethodName":"Update Patient",
                "Synopsis":"Update patient info",
                "HTTPMethod":"PUT",
-               "URI":"/identity/patient",
+               "URI":"/identity/patients",
                "RequiresOAuth":"N",
                "parameters":[
                ]
@@ -123,7 +123,7 @@
                "MethodName":"Update Provider",
                "Synopsis":"Update provider info",
                "HTTPMethod":"PUT",
-               "URI":"/identity/provider",
+               "URI":"/identity/providers",
                "RequiresOAuth":"N",
                "parameters":[
                ]
@@ -132,7 +132,7 @@
                "MethodName":"Update Company",
                "Synopsis":"Update company info",
                "HTTPMethod":"PUT",
-               "URI":"/identity/company",
+               "URI":"/identity/companies",
                "RequiresOAuth":"N",
                "parameters":[
                ]
@@ -141,7 +141,7 @@
                "MethodName":"Update Clinic",
                "Synopsis":"Update clinic info",
                "HTTPMethod":"PUT",
-               "URI":"/identity/clinic",
+               "URI":"/identity/clinics",
                "RequiresOAuth":"N",
                "parameters":[
                ]
@@ -150,7 +150,7 @@
                "MethodName":"Delete Patient",
                "Synopsis":"Innactivate a patient",
                "HTTPMethod":"DELETE",
-               "URI":"/identity/patient",
+               "URI":"/identity/patients",
                "RequiresOAuth":"N",
                "parameters":[
                ]
@@ -159,7 +159,7 @@
                "MethodName":"Delete Provider",
                "Synopsis":"Innactivate a provider",
                "HTTPMethod":"DELETE",
-               "URI":"/identity/provider",
+               "URI":"/identity/providers",
                "RequiresOAuth":"N",
                "parameters":[
                ]
@@ -168,7 +168,7 @@
                "MethodName":"Delete Company",
                "Synopsis":"Innactivate a company",
                "HTTPMethod":"DELETE",
-               "URI":"/identity/company",
+               "URI":"/identity/companies",
                "RequiresOAuth":"N",
                "parameters":[
                ]
@@ -177,7 +177,7 @@
                "MethodName":"Delete Clinic",
                "Synopsis":"Innactivate a clinic",
                "HTTPMethod":"DELETE",
-               "URI":"/identity/clinic",
+               "URI":"/identity/clinics",
                "RequiresOAuth":"N",
                "parameters":[
                ]
@@ -287,7 +287,7 @@
                "MethodName":"Pain Scores",
                "Synopsis":"Get pain scores for current patient",
                "HTTPMethod":"GET",
-               "URI":"/patientreported/goals",
+               "URI":"/patientreported/pain",
                "RequiresOAuth":"N",
                "parameters":[
                ]
@@ -314,7 +314,7 @@
                "MethodName":"Add Workout",
                "Synopsis":"Add workout for current patient",
                "HTTPMethod":"POST",
-               "URI":"/patientreported/workout",
+               "URI":"/patientreported/workouts",
                "RequiresOAuth":"N",
                "parameters":[
                ]
@@ -364,30 +364,9 @@
                "MethodName":"Current Routine",
                "Synopsis":"Get the current home exercise routine for the specified user.",
                "HTTPMethod":"GET",
-               "URI":"/routines.php",
+               "URI":"/hep/routines",
                "RequiresOAuth":"N",
                "parameters":[
-                  {
-                     "Name":"customer_key",
-                     "Required":"Y",
-                     "Default":"382",
-                     "Type":"string",
-                     "Description":"The customer key for identification" 
-                  },
-                  {
-                     "Name":"action",
-                     "Required":"Y",
-                     "Default":"read",
-                     "Type":"string",
-                     "Description":"CRUD Action" 
-                  },
-                                    {
-                     "Name":"controller",
-                     "Required":"Y",
-                     "Default":"routines",
-                     "Type":"string",
-                     "Description":"The controller for action processing" 
-                  },
                   {
                      "Name":"patient_id",
                      "Required":"Y",
@@ -426,7 +405,7 @@
                "MethodName":"Videos Viewed",
                "Synopsis":"Get videos viewed for current patient",
                "HTTPMethod":"GET",
-               "URI":"/hep/videosviewed",
+               "URI":"/hep/reminders",
                "RequiresOAuth":"N",
                "parameters":[
                ]
@@ -435,7 +414,7 @@
                "MethodName":"Add Reminder",
                "Synopsis":"Add reminder for current patient",
                "HTTPMethod":"POST",
-               "URI":"/hep/reminder",
+               "URI":"/hep/reminders",
                "RequiresOAuth":"N",
                "parameters":[
                ]
@@ -462,7 +441,7 @@
                "MethodName":"Delete Reminder",
                "Synopsis":"Delete reminder for current patient",
                "HTTPMethod":"DELETE",
-               "URI":"/hep/reminders",
+               "URI":"/hep/videosviewed",
                "RequiresOAuth":"N",
                "parameters":[
                ]
@@ -476,7 +455,7 @@
                "MethodName":"Get Questions Sent to Provider",
                "Synopsis":"Get the question(s) sent to the current user's provider",
                "HTTPMethod":"GET",
-               "URI":"/messaging/patient",
+               "URI":"/messaging",
                "RequiresOAuth":"N",
                "parameters":[
 
@@ -486,7 +465,7 @@
                "MethodName":"Send Question to Provider",
                "Synopsis":"Send current user's provider a question",
                "HTTPMethod":"POST",
-               "URI":"/messaging/patient",
+               "URI":"/messaging",
                "RequiresOAuth":"N",
                "parameters":[
 
@@ -496,7 +475,7 @@
                "MethodName":"Exercise Too Easy",
                "Synopsis":"Tell provider that an exercise is too easy",
                "HTTPMethod":"POST",
-               "URI":"/messaging/patient",
+               "URI":"/messaging",
                "RequiresOAuth":"N",
                "parameters":[
 
@@ -506,7 +485,7 @@
                "MethodName":"Exercise Too Hard",
                "Synopsis":"Tell provider that an exercise is too hard",
                "HTTPMethod":"POST",
-               "URI":"/messaging/patient",
+               "URI":"/messaging",
                "RequiresOAuth":"N",
                "parameters":[
 
