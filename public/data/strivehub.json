@@ -616,10 +616,9 @@
                "MethodName":"Delete Insurance Plan",
                "Synopsis":"Delete an insurance plan for the specified user.",
                "HTTPMethod":"DELETE",
-               "URI":"/patient/insurance",
+               "URI":"/patients/insurance",
                "RequiresOAuth":"N",
                "parameters":[
-
                ]
             }
          ]
