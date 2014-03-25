@@ -1,12 +1,15 @@
 extends layout
 block content
-  h1=apiInfo.name
+
+  h1='StriveHub I/O Docs: API Documentation (v1)'
   - if (session.authed && apiInfo.oauth && apiInfo.oauth.type =='three-legged')
       - var authed ='authed'
   - else if (session.authed && apiInfo.oauth2)
       - var authed ='authed'
   - else
       - var authed =''
+
+  h2="Test out the APIs in the StriveHub ecosystem with IO Docs below. Once you have an API key, you can make live calls and receive responses, exactly as you would when you are ready to make your own API calls. Get started easily and quickly with IO Docs."
 
   form#credentials
       input(type='hidden', name='apiName', value=apiName)
