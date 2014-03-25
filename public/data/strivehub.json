@@ -429,6 +429,15 @@
                ]
             },
             {
+               "MethodName":"Add Routine",
+               "Synopsis":"Add video viewed for current patient",
+               "HTTPMethod":"POST",
+               "URI":"/hep/routines",
+               "RequiresOAuth":"N",
+               "parameters":[
+               ]
+            },
+            {
                "MethodName":"Update Reminders",
                "Synopsis":"Update reminders for current patient",
                "HTTPMethod":"PUT",
