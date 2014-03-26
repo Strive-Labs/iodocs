@@ -1,10 +1,11 @@
 !!! 5
 html
     head
+        div(style='background: #0e98f4; font-size: 200%; color: white; text-align: center; padding-bottom: 5px; padding-top: 5px; margin-bottom: 15px;') StriveLabs Developer Center
         - if (apiInfo.name)
             - var title = apiInfo.name + ' API Documentation'
         -else
-            - var title = 'Live Documentation'
+            - var title = 'API Documentation'
         title=title
         link(rel='stylesheet', href='/stylesheets/prettify.css')
         link(rel='stylesheet', href='/stylesheets/style.css')
