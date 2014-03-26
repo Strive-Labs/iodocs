@@ -10,6 +10,13 @@
                "URI":"/identity/patients",
                "RequiresOAuth":"N",
                "parameters":[
+                  {
+                     "Name":"patient_id",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Provider ID" 
+                  }
                ]
             },
             {
@@ -19,6 +26,13 @@
                "URI":"/identity/providers",
                "RequiresOAuth":"N",
                "parameters":[
+                  {
+                     "Name":"provider_id",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Provider ID" 
+                  }
                ]
             },
             {
@@ -37,6 +51,13 @@
                "URI":"/identity/clinics",
                "RequiresOAuth":"N",
                "parameters":[
+                  {
+                     "Name":"clinic_id",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Provider ID" 
+                  }
                ]
             },
             {
@@ -90,6 +111,76 @@
                "URI":"/identity/providers",
                "RequiresOAuth":"N",
                "parameters":[
+                  {
+                     "Name":"clinic_id",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The clinic id that the provider is to be associated with"
+                  },
+                  {
+                     "Name":"first_name",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The first name of the provider"
+                  },
+                  {
+                     "Name":"last_name",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The last name of the provider"
+                  },
+                  {
+                     "Name":"username",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The last name of the provider"
+                  },
+                  {
+                     "Name":"password",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The password for the provider"
+                  },
+                  {
+                     "Name":"email",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The email of the provider"
+                  },
+                  {
+                     "Name":"license",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The license of the provider"
+                  },
+                  {
+                     "Name":"profession",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The profession of the provider"
+                  },
+                  {
+                     "Name":"birthday",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The birthday of the provider"
+                  },
+                  {
+                     "Name":"gender",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The gender of the provider"
+                  }
                ]
             },
             {
@@ -103,11 +194,88 @@
             },
             {
                "MethodName":"Add Clinic",
-               "Synopsis":"Add a new clinics",
+               "Synopsis":"Add a new clinic",
                "HTTPMethod":"POST",
                "URI":"/identity/clinic",
                "RequiresOAuth":"N",
                "parameters":[
+                  {
+                     "Name":"name",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Clinic name" 
+                  },
+                  {
+                     "Name":"address",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Street address" 
+                  },
+                  {
+                     "Name":"city",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"City" 
+                  },
+                  {
+                     "Name":"state",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"State/Province" 
+                  },
+                  {
+                     "Name":"zip",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Zip code" 
+                  },
+                  {
+                     "Name":"phone",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Phone number" 
+                  },
+                  {
+                     "Name":"directors_name",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Name of clinic's director" 
+                  },
+                  {
+                     "Name":"directors_email",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Email of clinic's director" 
+                  },
+                  {
+                     "Name":"fax",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Fax number" 
+                  },
+                  {
+                     "Name":"website",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Website" 
+                  },
+                  {
+                     "Name":"description",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Description" 
+                  }
                ]
             },
             {
@@ -117,6 +285,55 @@
                "URI":"/identity/patients",
                "RequiresOAuth":"N",
                "parameters":[
+                  {
+                     "Name":"patient_id",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The patient ID from the provider EHR." 
+                  },
+                  {
+                     "Name":"first_name",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The first name of the patient"
+                  },
+                  {
+                     "Name":"last_name",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The last name of the patient"
+                  },
+                  {
+                     "Name":"user_name",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The user name of the patient"
+                  },
+                  {
+                     "Name":"password",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The password for portal access"
+                  },
+                  {
+                     "Name":"email",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The email of the patient"
+                  },
+                  {
+                     "Name":"birthday",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The birthday of the patient"
+                  }
                ]
             },
             {
@@ -126,6 +343,83 @@
                "URI":"/identity/providers",
                "RequiresOAuth":"N",
                "parameters":[
+                  {
+                     "Name":"provider_id",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The provider ID.  Required for all changes"
+                  },
+                  {
+                     "Name":"clinic_id",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The clinic id that the provider is associated with"
+                  },
+                  {
+                     "Name":"first_name",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The first name of the provider"
+                  },
+                  {
+                     "Name":"last_name",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The last name of the provider"
+                  },
+                  {
+                     "Name":"username",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The last name of the provider"
+                  },
+                  {
+                     "Name":"password",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The password for the provider"
+                  },
+                  {
+                     "Name":"email",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The email of the provider"
+                  },
+                  {
+                     "Name":"license",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The license of the provider"
+                  },
+                  {
+                     "Name":"profession",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The profession of the provider"
+                  },
+                  {
+                     "Name":"birthday",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The birthday of the provider"
+                  },
+                  {
+                     "Name":"gender",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The gender of the provider"
+                  }
                ]
             },
             {
@@ -144,6 +438,76 @@
                "URI":"/identity/clinics",
                "RequiresOAuth":"N",
                "parameters":[
+                  {
+                     "Name":"id",
+                     "Required":"Y",
+                     "Default":"1",
+                     "Type":"string",
+                     "Description":"Clinic ID: Required for any updates to record" 
+                  },
+                  {
+                     "Name":"name",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Clinic name" 
+                  },
+                  {
+                     "Name":"address",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Street address" 
+                  },
+                  {
+                     "Name":"city",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"City" 
+                  },
+                  {
+                     "Name":"state",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"State/Province" 
+                  },
+                  {
+                     "Name":"zip",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Zip code" 
+                  },
+                  {
+                     "Name":"phone",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Phone number" 
+                  },
+                  {
+                     "Name":"fax",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Fax number" 
+                  },
+                  {
+                     "Name":"website",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Website" 
+                  },
+                  {
+                     "Name":"description",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Description" 
+                  }
                ]
             },
             {
@@ -153,6 +517,13 @@
                "URI":"/identity/patients",
                "RequiresOAuth":"N",
                "parameters":[
+                  {
+                     "Name":"patient_id",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Patient ID" 
+                  }
                ]
             },
             {
@@ -162,6 +533,13 @@
                "URI":"/identity/providers",
                "RequiresOAuth":"N",
                "parameters":[
+                  {
+                     "Name":"provider_id",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Provider ID" 
+                  }
                ]
             },
             {
@@ -180,6 +558,13 @@
                "URI":"/identity/clinics",
                "RequiresOAuth":"N",
                "parameters":[
+                  {
+                     "Name":"clinic_id",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Clinic ID" 
+                  }
                ]
             }
          ]
@@ -388,7 +773,14 @@
                      "Required":"Y",
                      "Default":"382",
                      "Type":"string",
-                     "Description":"The user to retrieve the archived routines for." 
+                     "Description":"The user to retrieve the archived routines for" 
+                  },
+                  {
+                     "Name":"all_routines",
+                     "Required":"Y",
+                     "Default":"true",
+                     "Type":"string",
+                     "Description":"Indicator to retrieve all routines" 
                   }
                ]
             },
@@ -399,6 +791,13 @@
                "URI":"/hep/reminders",
                "RequiresOAuth":"N",
                "parameters":[
+                  {
+                     "Name":"patient_id",
+                     "Required":"Y",
+                     "Default":"1215",
+                     "Type":"string",
+                     "Description":"The patient to retrieve reminders for" 
+                  }
                ]
             },
             {
@@ -408,6 +807,13 @@
                "URI":"/hep/reminders",
                "RequiresOAuth":"N",
                "parameters":[
+                  {
+                     "Name":"patient_id",
+                     "Required":"Y",
+                     "Default":"1215",
+                     "Type":"string",
+                     "Description":"The patient retrieve all videos viewed" 
+                  }
                ]
             },
             {
@@ -417,6 +823,13 @@
                "URI":"/hep/reminders",
                "RequiresOAuth":"N",
                "parameters":[
+                  {
+                     "Name":"patient_id",
+                     "Required":"Y",
+                     "Default":"1215",
+                     "Type":"string",
+                     "Description":"The patient to set a reminder for" 
+                  }
                ]
             },
             {
@@ -426,6 +839,13 @@
                "URI":"/hep/videosviewed",
                "RequiresOAuth":"N",
                "parameters":[
+                  {
+                     "Name":"patient_id",
+                     "Required":"Y",
+                     "Default":"1215",
+                     "Type":"string",
+                     "Description":"The patient to set videos viewed" 
+                  }
                ]
             },
             {
@@ -477,7 +897,20 @@
                "URI":"/messaging",
                "RequiresOAuth":"N",
                "parameters":[
-
+                  {
+                     "Name":"patient_id",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The patient ID" 
+                  },
+                  {
+                     "Name":"message_text",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The message text to send to the provider" 
+                  }
                ]
             },
             {
@@ -487,6 +920,20 @@
                "URI":"/messaging",
                "RequiresOAuth":"N",
                "parameters":[
+                  {
+                     "Name":"patient_id",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The patient ID" 
+                  },
+                  {
+                     "Name":"video_id",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The video ID of the exercise to set as too easy" 
+                  }
 
                ]
             },
@@ -497,6 +944,20 @@
                "URI":"/messaging",
                "RequiresOAuth":"N",
                "parameters":[
+                  {
+                     "Name":"patient_id",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The patient ID" 
+                  },
+                  {
+                     "Name":"video_id",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The video ID of the exercise to set as too hard" 
+                  }
 
                ]
             }
@@ -517,7 +978,7 @@
                      "Required":"Y",
                      "Default":"382",
                      "Type":"string",
-                     "Description":"The user to retrieve a careplan for." 
+                     "Description":"The patient to retrieve the appointments for" 
                   }
                ]
             },
