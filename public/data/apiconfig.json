@@ -2,8 +2,17 @@
     "strivehub": {
         "name": "StriveHub v1 API",
         "protocol": "http",
-        "baseURL": "new.theravid.com",
+        "baseURL": "api.tv.com",
         "publicPath": "/v1",
+        "privatePath": "",
+        "auth": "key",
+        "keyParam": "api_key"
+    },
+    "strivehub-truevault": {
+        "name": "StriveHub-TrueVault Connector v1 API",
+        "protocol": "http",
+        "baseURL": "api.tv.com",
+        "publicPath": "/truevault",
         "privatePath": "",
         "auth": "key",
         "keyParam": "api_key"

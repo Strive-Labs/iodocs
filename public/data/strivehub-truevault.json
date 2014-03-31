@@ -1,0 +1,1097 @@
+{
+   "endpoints":[
+      {        
+         "name":"Identity",
+         "methods":[
+            {
+               "MethodName":"Patient",
+               "Synopsis":"Get patient identity profile",
+               "HTTPMethod":"GET",
+               "URI":"/identity/patients",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"patient_id",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Provider ID" 
+                  }
+               ]
+            },
+            {
+               "MethodName":"Provider",
+               "Synopsis":"Get provider identity profile",
+               "HTTPMethod":"GET",
+               "URI":"/identity/providers",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"provider_id",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Provider ID" 
+                  }
+               ]
+            },
+            {
+               "MethodName":"Company",
+               "Synopsis":"Get company identity profile",
+               "HTTPMethod":"GET",
+               "URI":"/identity/companies",
+               "RequiresOAuth":"N",
+               "parameters":[
+               ]
+            },
+            {
+               "MethodName":"Clinic",
+               "Synopsis":"Get clinic identity profile",
+               "HTTPMethod":"GET",
+               "URI":"/identity/clinics",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"clinic_id",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Provider ID" 
+                  }
+               ]
+            },
+            {
+               "MethodName":"Add Patient",
+               "Synopsis":"Add a new patient",
+               "HTTPMethod":"POST",
+               "URI":"/identity/patients",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"patient_id",
+                     "Required":"Y",
+                     "Default":"548768",
+                     "Type":"string",
+                     "Description":"The patient ID from the provider EHR." 
+                  },
+                  {
+                     "Name":"first_name",
+                     "Required":"Y",
+                     "Default":"Bob",
+                     "Type":"string",
+                     "Description":"The first name of the patient."
+                  },
+                  {
+                     "Name":"last_name",
+                     "Required":"Y",
+                     "Default":"Jones",
+                     "Type":"string",
+                     "Description":"The last name of the patient."
+                  },
+                  {
+                     "Name":"email",
+                     "Required":"Y",
+                     "Default":"jones@example.com",
+                     "Type":"string",
+                     "Description":"The email of the patient."
+                  },
+                  {
+                     "Name":"birthday",
+                     "Required":"Y",
+                     "Default":"12/12/2012",
+                     "Type":"string",
+                     "Description":"The birthday of the patient."
+                  }
+               ]
+            },            
+            {
+               "MethodName":"Add Provider",
+               "Synopsis":"Add a new provider",
+               "HTTPMethod":"POST",
+               "URI":"/identity/providers",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"clinic_id",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The clinic id that the provider is to be associated with"
+                  },
+                  {
+                     "Name":"first_name",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The first name of the provider"
+                  },
+                  {
+                     "Name":"last_name",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The last name of the provider"
+                  },
+                  {
+                     "Name":"username",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The last name of the provider"
+                  },
+                  {
+                     "Name":"password",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The password for the provider"
+                  },
+                  {
+                     "Name":"email",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The email of the provider"
+                  },
+                  {
+                     "Name":"license",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The license of the provider"
+                  },
+                  {
+                     "Name":"profession",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The profession of the provider"
+                  },
+                  {
+                     "Name":"birthday",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The birthday of the provider"
+                  },
+                  {
+                     "Name":"gender",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The gender of the provider"
+                  }
+               ]
+            },
+            {
+               "MethodName":"Add Company",
+               "Synopsis":"Add a new company",
+               "HTTPMethod":"POST",
+               "URI":"/identity/companies",
+               "RequiresOAuth":"N",
+               "parameters":[
+               ]
+            },
+            {
+               "MethodName":"Add Clinic",
+               "Synopsis":"Add a new clinic",
+               "HTTPMethod":"POST",
+               "URI":"/identity/clinic",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"name",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Clinic name" 
+                  },
+                  {
+                     "Name":"address",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Street address" 
+                  },
+                  {
+                     "Name":"city",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"City" 
+                  },
+                  {
+                     "Name":"state",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"State/Province" 
+                  },
+                  {
+                     "Name":"zip",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Zip code" 
+                  },
+                  {
+                     "Name":"phone",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Phone number" 
+                  },
+                  {
+                     "Name":"directors_name",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Name of clinic's director" 
+                  },
+                  {
+                     "Name":"directors_email",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Email of clinic's director" 
+                  },
+                  {
+                     "Name":"fax",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Fax number" 
+                  },
+                  {
+                     "Name":"website",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Website" 
+                  },
+                  {
+                     "Name":"description",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Description" 
+                  }
+               ]
+            },
+            {
+               "MethodName":"Update Patient",
+               "Synopsis":"Update patient info",
+               "HTTPMethod":"PUT",
+               "URI":"/identity/patients",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"patient_id",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The patient ID from the provider EHR." 
+                  },
+                  {
+                     "Name":"first_name",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The first name of the patient"
+                  },
+                  {
+                     "Name":"last_name",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The last name of the patient"
+                  },
+                  {
+                     "Name":"user_name",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The user name of the patient"
+                  },
+                  {
+                     "Name":"password",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The password for portal access"
+                  },
+                  {
+                     "Name":"email",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The email of the patient"
+                  },
+                  {
+                     "Name":"birthday",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The birthday of the patient"
+                  }
+               ]
+            },
+            {
+               "MethodName":"Update Provider",
+               "Synopsis":"Update provider info",
+               "HTTPMethod":"PUT",
+               "URI":"/identity/providers",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"provider_id",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The provider ID.  Required for all changes"
+                  },
+                  {
+                     "Name":"clinic_id",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The clinic id that the provider is associated with"
+                  },
+                  {
+                     "Name":"first_name",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The first name of the provider"
+                  },
+                  {
+                     "Name":"last_name",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The last name of the provider"
+                  },
+                  {
+                     "Name":"username",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The last name of the provider"
+                  },
+                  {
+                     "Name":"password",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The password for the provider"
+                  },
+                  {
+                     "Name":"email",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The email of the provider"
+                  },
+                  {
+                     "Name":"license",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The license of the provider"
+                  },
+                  {
+                     "Name":"profession",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The profession of the provider"
+                  },
+                  {
+                     "Name":"birthday",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The birthday of the provider"
+                  },
+                  {
+                     "Name":"gender",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The gender of the provider"
+                  }
+               ]
+            },
+            {
+               "MethodName":"Update Company",
+               "Synopsis":"Update company info",
+               "HTTPMethod":"PUT",
+               "URI":"/identity/companies",
+               "RequiresOAuth":"N",
+               "parameters":[
+               ]
+            },
+            {
+               "MethodName":"Update Clinic",
+               "Synopsis":"Update clinic info",
+               "HTTPMethod":"PUT",
+               "URI":"/identity/clinics",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"id",
+                     "Required":"Y",
+                     "Default":"1",
+                     "Type":"string",
+                     "Description":"Clinic ID: Required for any updates to record" 
+                  },
+                  {
+                     "Name":"name",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Clinic name" 
+                  },
+                  {
+                     "Name":"address",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Street address" 
+                  },
+                  {
+                     "Name":"city",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"City" 
+                  },
+                  {
+                     "Name":"state",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"State/Province" 
+                  },
+                  {
+                     "Name":"zip",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Zip code" 
+                  },
+                  {
+                     "Name":"phone",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Phone number" 
+                  },
+                  {
+                     "Name":"fax",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Fax number" 
+                  },
+                  {
+                     "Name":"website",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Website" 
+                  },
+                  {
+                     "Name":"description",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Description" 
+                  }
+               ]
+            },
+            {
+               "MethodName":"Delete Patient",
+               "Synopsis":"Innactivate a patient",
+               "HTTPMethod":"DELETE",
+               "URI":"/identity/patients",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"patient_id",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Patient ID" 
+                  }
+               ]
+            },
+            {
+               "MethodName":"Delete Provider",
+               "Synopsis":"Innactivate a provider",
+               "HTTPMethod":"DELETE",
+               "URI":"/identity/providers",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"provider_id",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Provider ID" 
+                  }
+               ]
+            },
+            {
+               "MethodName":"Delete Company",
+               "Synopsis":"Innactivate a company",
+               "HTTPMethod":"DELETE",
+               "URI":"/identity/companies",
+               "RequiresOAuth":"N",
+               "parameters":[
+               ]
+            },
+            {
+               "MethodName":"Delete Clinic",
+               "Synopsis":"Innactivate a clinic",
+               "HTTPMethod":"DELETE",
+               "URI":"/identity/clinics",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"clinic_id",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Clinic ID" 
+                  }
+               ]
+            }
+         ]
+      },
+     
+      {        
+         "name":"Objective Data",
+         "methods":[
+            {
+               "MethodName":"Strength Data",
+               "Synopsis":"Get strength data for current patient",
+               "HTTPMethod":"GET",
+               "URI":"/objective/strength",
+               "RequiresOAuth":"N",
+               "parameters":[
+               ]
+            },
+            {
+               "MethodName":"Flexibility Data",
+               "Synopsis":"Get flexibility data for current patient",
+               "HTTPMethod":"GET",
+               "URI":"/objective/flexibility",
+               "RequiresOAuth":"N",
+               "parameters":[
+               ]
+            },
+            {
+               "MethodName":"Pain Scores",
+               "Synopsis":"Get pain scores for current patient",
+               "HTTPMethod":"GET",
+               "URI":"/objective/pain",
+               "RequiresOAuth":"N",
+               "parameters":[
+               ]
+            },
+            {
+               "MethodName":"Functional Outcome Score",
+               "Synopsis":"Get functional outcome score for current patient",
+               "HTTPMethod":"GET",
+               "URI":"/objective/fos",
+               "RequiresOAuth":"N",
+               "parameters":[
+               ]
+            },
+            {
+               "MethodName":"Add Strength Data",
+               "Synopsis":"Add strength data for current patient",
+               "HTTPMethod":"POST",
+               "URI":"/objective/strength",
+               "RequiresOAuth":"N",
+               "parameters":[
+               ]
+            },
+                        {
+               "MethodName":"Add Flexibility Data",
+               "Synopsis":"Add flexibility data for current patient",
+               "HTTPMethod":"POST",
+               "URI":"/objective/flexibility",
+               "RequiresOAuth":"N",
+               "parameters":[
+               ]
+            },
+                        {
+               "MethodName":"Add Pain Score",
+               "Synopsis":"Add pain score for current patient",
+               "HTTPMethod":"POST",
+               "URI":"/objective/pain",
+               "RequiresOAuth":"N",
+               "parameters":[
+               ]
+            },
+                        {
+               "MethodName":"Add Functional Outcome Score",
+               "Synopsis":"Add functional outcome score for current patient",
+               "HTTPMethod":"POST",
+               "URI":"/objective/fos",
+               "RequiresOAuth":"N",
+               "parameters":[
+               ]
+            }
+         ]
+      },
+      {        
+         "name":"Patient Reported Data",
+         "methods":[
+            {
+               "MethodName":"Goals",
+               "Synopsis":"Get goals for current patient",
+               "HTTPMethod":"GET",
+               "URI":"/patientreported/goals",
+               "RequiresOAuth":"N",
+               "parameters":[
+               ]
+            },
+            {
+               "MethodName":"Workouts",
+               "Synopsis":"Get workouts for current patient",
+               "HTTPMethod":"GET",
+               "URI":"/patientreported/workouts",
+               "RequiresOAuth":"N",
+               "parameters":[
+               ]
+            },
+            {
+               "MethodName":"Pain Scores",
+               "Synopsis":"Get pain scores for current patient",
+               "HTTPMethod":"GET",
+               "URI":"/patientreported/pain",
+               "RequiresOAuth":"N",
+               "parameters":[
+               ]
+            },
+            {
+               "MethodName":"Functional Outcome Scores",
+               "Synopsis":"Get functional outcome score for current patient",
+               "HTTPMethod":"GET",
+               "URI":"/patientreported/fos",
+               "RequiresOAuth":"N",
+               "parameters":[
+               ]
+            },
+            {
+               "MethodName":"Add Goal",
+               "Synopsis":"Add goal for current patient",
+               "HTTPMethod":"POST",
+               "URI":"/patientreported/goals",
+               "RequiresOAuth":"N",
+               "parameters":[
+               ]
+            },
+            {
+               "MethodName":"Add Workout",
+               "Synopsis":"Add workout for current patient",
+               "HTTPMethod":"POST",
+               "URI":"/patientreported/workouts",
+               "RequiresOAuth":"N",
+               "parameters":[
+               ]
+            },
+            {
+               "MethodName":"Add Pain Score",
+               "Synopsis":"Add pain score for current patient",
+               "HTTPMethod":"POST",
+               "URI":"/patientreported/pain",
+               "RequiresOAuth":"N",
+               "parameters":[
+               ]
+            },
+            {
+               "MethodName":"Add Functional Outcome Score",
+               "Synopsis":"Add functional outcome score for current patient",
+               "HTTPMethod":"POST",
+               "URI":"/patientreported/fos",
+               "RequiresOAuth":"N",
+               "parameters":[
+               ]
+            },
+            {
+               "MethodName":"Update Goal",
+               "Synopsis":"Update goal for current patient",
+               "HTTPMethod":"PUT",
+               "URI":"/patientreported/goals",
+               "RequiresOAuth":"N",
+               "parameters":[
+               ]
+            },
+            {
+               "MethodName":"Delete Goal",
+               "Synopsis":"Delete goal for current patient",
+               "HTTPMethod":"DELETE",
+               "URI":"/patientreported/goals",
+               "RequiresOAuth":"N",
+               "parameters":[
+               ]
+            }
+         ]
+      },    
+      {        
+         "name":"Home Exercise Prescription",
+         "methods":[
+            {
+               "MethodName":"Current Routine",
+               "Synopsis":"Get the current home exercise routine for the specified user.",
+               "HTTPMethod":"GET",
+               "URI":"/hep/routines",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"patient_id",
+                     "Required":"Y",
+                     "Default":"1215",
+                     "Type":"string",
+                     "Description":"The user to retrieve the routine for." 
+                  }
+               ]
+            },
+            {
+               "MethodName":"Archived Routines",
+               "Synopsis":"Get the set of archived exercise routine components for the specified user.",
+               "HTTPMethod":"GET",
+               "URI":"/hep/routines",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"patient_id",
+                     "Required":"Y",
+                     "Default":"382",
+                     "Type":"string",
+                     "Description":"The user to retrieve the archived routines for" 
+                  },
+                  {
+                     "Name":"all_routines",
+                     "Required":"Y",
+                     "Default":"true",
+                     "Type":"string",
+                     "Description":"Indicator to retrieve all routines" 
+                  }
+               ]
+            },
+            {
+               "MethodName":"Reminders",
+               "Synopsis":"Get reminders for current patient",
+               "HTTPMethod":"GET",
+               "URI":"/hep/reminders",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"patient_id",
+                     "Required":"Y",
+                     "Default":"1215",
+                     "Type":"string",
+                     "Description":"The patient to retrieve reminders for" 
+                  }
+               ]
+            },
+            {
+               "MethodName":"Videos Viewed",
+               "Synopsis":"Get videos viewed for current patient",
+               "HTTPMethod":"GET",
+               "URI":"/hep/reminders",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"patient_id",
+                     "Required":"Y",
+                     "Default":"1215",
+                     "Type":"string",
+                     "Description":"The patient retrieve all videos viewed" 
+                  }
+               ]
+            },
+            {
+               "MethodName":"Add Reminder",
+               "Synopsis":"Add reminder for current patient",
+               "HTTPMethod":"POST",
+               "URI":"/hep/reminders",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"patient_id",
+                     "Required":"Y",
+                     "Default":"1215",
+                     "Type":"string",
+                     "Description":"The patient to set a reminder for" 
+                  }
+               ]
+            },
+            {
+               "MethodName":"Add Videos Viewed",
+               "Synopsis":"Add video viewed for current patient",
+               "HTTPMethod":"POST",
+               "URI":"/hep/videosviewed",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"patient_id",
+                     "Required":"Y",
+                     "Default":"1215",
+                     "Type":"string",
+                     "Description":"The patient to set videos viewed" 
+                  }
+               ]
+            },
+            {
+               "MethodName":"Add Routine",
+               "Synopsis":"Add video viewed for current patient",
+               "HTTPMethod":"POST",
+               "URI":"/hep/routines",
+               "RequiresOAuth":"N",
+               "parameters":[
+               ]
+            },
+            {
+               "MethodName":"Update Reminders",
+               "Synopsis":"Update reminders for current patient",
+               "HTTPMethod":"PUT",
+               "URI":"/hep/reminders",
+               "RequiresOAuth":"N",
+               "parameters":[
+               ]
+            },
+            {
+               "MethodName":"Delete Reminder",
+               "Synopsis":"Delete reminder for current patient",
+               "HTTPMethod":"DELETE",
+               "URI":"/hep/videosviewed",
+               "RequiresOAuth":"N",
+               "parameters":[
+               ]
+            }
+         ]
+      },    
+      {
+         "name":"Messaging",
+         "methods":[ 
+             {
+               "MethodName":"Get Questions Sent to Provider",
+               "Synopsis":"Get the question(s) sent to the current user's provider",
+               "HTTPMethod":"GET",
+               "URI":"/messaging",
+               "RequiresOAuth":"N",
+               "parameters":[
+
+               ]
+            }, 
+            {
+               "MethodName":"Send Question to Provider",
+               "Synopsis":"Send current user's provider a question",
+               "HTTPMethod":"POST",
+               "URI":"/messaging",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"patient_id",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The patient ID" 
+                  },
+                  {
+                     "Name":"message_text",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The message text to send to the provider" 
+                  }
+               ]
+            },
+            {
+               "MethodName":"Exercise Too Easy",
+               "Synopsis":"Tell provider that an exercise is too easy",
+               "HTTPMethod":"POST",
+               "URI":"/messaging",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"patient_id",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The patient ID" 
+                  },
+                  {
+                     "Name":"video_id",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The video ID of the exercise to set as too easy" 
+                  }
+
+               ]
+            },
+            {
+               "MethodName":"Exercise Too Hard",
+               "Synopsis":"Tell provider that an exercise is too hard",
+               "HTTPMethod":"POST",
+               "URI":"/messaging",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"patient_id",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The patient ID" 
+                  },
+                  {
+                     "Name":"video_id",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"The video ID of the exercise to set as too hard" 
+                  }
+
+               ]
+            }
+         ]
+      },
+      {
+         "name":"Patient Management",
+         "methods":[
+            {
+               "MethodName":"Appointments",
+               "Synopsis":"Get the next scheduled appointment for the specified user.",
+               "HTTPMethod":"GET",
+               "URI":"/patient/appointments",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"patient_id",
+                     "Required":"Y",
+                     "Default":"382",
+                     "Type":"string",
+                     "Description":"The patient to retrieve the appointments for" 
+                  }
+               ]
+            },
+            {
+               "MethodName":"Invoices",
+               "Synopsis":"Get the invoice(s) for the specified user.",
+               "HTTPMethod":"GET",
+               "URI":"/patient/invoices",
+               "RequiresOAuth":"N",
+               "parameters":[
+
+               ]
+            },
+            {
+               "MethodName":"Payments",
+               "Synopsis":"Get the payment(s) for the specified user.",
+               "HTTPMethod":"GET",
+               "URI":"/patient/payments",
+               "RequiresOAuth":"N",
+               "parameters":[
+
+               ]
+            },
+            {
+               "MethodName":"Insurance",
+               "Synopsis":"Get the insurance plan(s) for the specified user.",
+               "HTTPMethod":"GET",
+               "URI":"/patient/insurance",
+               "RequiresOAuth":"N",
+               "parameters":[
+
+               ]
+            },
+            {
+               "MethodName":"Add Appointment",
+               "Synopsis":"Add an appointment for the specified user.",
+               "HTTPMethod":"POST",
+               "URI":"/patient/appointments",
+               "RequiresOAuth":"N",
+               "parameters":[
+
+               ]
+            },
+                        {
+               "MethodName":"Add Payment",
+               "Synopsis":"Add a payment for the specified user.",
+               "HTTPMethod":"POST",
+               "URI":"/patient/payments",
+               "RequiresOAuth":"N",
+               "parameters":[
+
+               ]
+            },
+            {
+               "MethodName":"Add Invoice",
+               "Synopsis":"Add an invoice for the specified user.",
+               "HTTPMethod":"POST",
+               "URI":"/patient/invoices",
+               "RequiresOAuth":"N",
+               "parameters":[
+
+               ]
+            },
+            {
+               "MethodName":"Add Insurance Plan",
+               "Synopsis":"Add an insurance plan for the specified user.",
+               "HTTPMethod":"POST",
+               "URI":"/patient/insurance",
+               "RequiresOAuth":"N",
+               "parameters":[
+
+               ]
+            },
+            {
+               "MethodName":"Update Appointment",
+               "Synopsis":"Update an appointment for the specified user.",
+               "HTTPMethod":"PUT",
+               "URI":"/patient/appointments",
+               "RequiresOAuth":"N",
+               "parameters":[
+
+               ]
+            },
+            {
+               "MethodName":"Update Insurance Plan",
+               "Synopsis":"Add an insurance plan for the specified user.",
+               "HTTPMethod":"PUT",
+               "URI":"/patient/insurance",
+               "RequiresOAuth":"N",
+               "parameters":[
+
+               ]
+            },
+            {
+               "MethodName":"Delete Appointment",
+               "Synopsis":"Add an appointment for the specified user.",
+               "HTTPMethod":"DELETE",
+               "URI":"/patient/appointments",
+               "RequiresOAuth":"N",
+               "parameters":[
+
+               ]
+            },
+            {
+               "MethodName":"Delete Insurance Plan",
+               "Synopsis":"Delete an insurance plan for the specified user.",
+               "HTTPMethod":"DELETE",
+               "URI":"/patients/insurance",
+               "RequiresOAuth":"N",
+               "parameters":[
+               ]
+            }
+         ]
+      }
+   ]
+}
