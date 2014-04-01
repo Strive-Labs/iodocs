@@ -884,7 +884,7 @@
                "MethodName":"Get Questions Sent to Provider",
                "Synopsis":"Get the question(s) sent to the current user's provider",
                "HTTPMethod":"GET",
-               "URI":"/messaging",
+               "URI":"/messaging/messages",
                "RequiresOAuth":"N",
                "parameters":[
 
@@ -894,7 +894,7 @@
                "MethodName":"Send Question to Provider",
                "Synopsis":"Send current user's provider a question",
                "HTTPMethod":"POST",
-               "URI":"/messaging",
+               "URI":"/messaging/messages",
                "RequiresOAuth":"N",
                "parameters":[
                   {
@@ -914,49 +914,32 @@
                ]
             },
             {
-               "MethodName":"Exercise Too Easy",
-               "Synopsis":"Tell provider that an exercise is too easy",
+               "MethodName":"Exercise Too Hard/Easy",
+               "Synopsis":"Tell provider that an exercise is either too hard or too easy",
                "HTTPMethod":"POST",
-               "URI":"/messaging",
+               "URI":"/messaging/messages",
                "RequiresOAuth":"N",
                "parameters":[
                   {
                      "Name":"patient_id",
                      "Required":"Y",
-                     "Default":"",
+                     "Default":"1215",
                      "Type":"string",
                      "Description":"The patient ID" 
                   },
                   {
+                     "Name":"complaint",
+                     "Required":"Y",
+                     "Default":"too_easy",
+                     "Type":"string",
+                     "Description":"Flag exercise as either too_hard or too_easy" 
+                  },
+                  {
                      "Name":"video_id",
                      "Required":"Y",
-                     "Default":"",
+                     "Default":"231",
                      "Type":"string",
                      "Description":"The video ID of the exercise to set as too easy" 
-                  }
-
-               ]
-            },
-            {
-               "MethodName":"Exercise Too Hard",
-               "Synopsis":"Tell provider that an exercise is too hard",
-               "HTTPMethod":"POST",
-               "URI":"/messaging",
-               "RequiresOAuth":"N",
-               "parameters":[
-                  {
-                     "Name":"patient_id",
-                     "Required":"Y",
-                     "Default":"",
-                     "Type":"string",
-                     "Description":"The patient ID" 
-                  },
-                  {
-                     "Name":"video_id",
-                     "Required":"Y",
-                     "Default":"",
-                     "Type":"string",
-                     "Description":"The video ID of the exercise to set as too hard" 
                   }
 
                ]
