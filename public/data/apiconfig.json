@@ -12,7 +12,7 @@
         "name": "StriveHub-TrueVault Connector v1 API",
         "protocol": "http",
         "baseURL": "api.tv.com",
-        "publicPath": "/truevault",
+        "publicPath": "/v1tv",
         "privatePath": "",
         "auth": "key",
         "keyParam": "api_key"
