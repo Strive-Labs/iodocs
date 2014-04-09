@@ -7,7 +7,7 @@
                "MethodName":"Patient",
                "Synopsis":"Get patient identity profile",
                "HTTPMethod":"GET",
-               "URI":"/identity/patients",
+               "URI":"/identity/patients/:patient_id",
                "RequiresOAuth":"N",
                "parameters":[
                   {
@@ -23,7 +23,7 @@
                "MethodName":"Provider",
                "Synopsis":"Get provider identity profile",
                "HTTPMethod":"GET",
-               "URI":"/identity/providers",
+               "URI":"/identity/providers/:provider_id",
                "RequiresOAuth":"N",
                "parameters":[
                   {
@@ -48,7 +48,7 @@
                "MethodName":"Clinic",
                "Synopsis":"Get clinic identity profile",
                "HTTPMethod":"GET",
-               "URI":"/identity/clinics",
+               "URI":"/identity/clinics/:clinic_id",
                "RequiresOAuth":"N",
                "parameters":[
                   {
