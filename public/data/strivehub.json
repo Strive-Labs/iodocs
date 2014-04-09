@@ -196,7 +196,7 @@
                "MethodName":"Add Clinic",
                "Synopsis":"Add a new clinic",
                "HTTPMethod":"POST",
-               "URI":"/identity/clinic",
+               "URI":"/identity/clinics",
                "RequiresOAuth":"N",
                "parameters":[
                   {
