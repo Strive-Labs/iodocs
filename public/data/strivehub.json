@@ -235,25 +235,32 @@
                      "Description":"Zip code" 
                   },
                   {
-                     "Name":"phone",
-                     "Required":"Y",
-                     "Default":"",
-                     "Type":"string",
-                     "Description":"Phone number" 
-                  },
-                  {
-                     "Name":"directors_name",
+                     "Name":"supervisor_name",
                      "Required":"Y",
                      "Default":"",
                      "Type":"string",
                      "Description":"Name of clinic's director" 
                   },
                   {
-                     "Name":"directors_email",
+                     "Name":"supervisor_email",
                      "Required":"Y",
                      "Default":"",
                      "Type":"string",
                      "Description":"Email of clinic's director" 
+                  },                  
+                  {
+                     "Name":"supervisor_phone",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Phone number" 
+                  },
+                  {
+                     "Name":"password",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Password" 
                   },
                   {
                      "Name":"fax",
@@ -261,20 +268,6 @@
                      "Default":"",
                      "Type":"string",
                      "Description":"Fax number" 
-                  },
-                  {
-                     "Name":"website",
-                     "Required":"Y",
-                     "Default":"",
-                     "Type":"string",
-                     "Description":"Website" 
-                  },
-                  {
-                     "Name":"description",
-                     "Required":"Y",
-                     "Default":"",
-                     "Type":"string",
-                     "Description":"Description" 
                   }
                ]
             },
