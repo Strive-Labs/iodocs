@@ -7,7 +7,7 @@
                "MethodName":"Patient",
                "Synopsis":"Get patient identity profile",
                "HTTPMethod":"GET",
-               "URI":"/identity/patients/:patient_id",
+               "URI":"/identity/patients/:patient_id/patient_info",
                "RequiresOAuth":"N",
                "parameters":[
                   {
@@ -23,7 +23,7 @@
                "MethodName":"Provider",
                "Synopsis":"Get provider identity profile",
                "HTTPMethod":"GET",
-               "URI":"/identity/providers/:provider_id",
+               "URI":"/identity/providers/:provider_id/provider_info",
                "RequiresOAuth":"N",
                "parameters":[
                   {
@@ -39,7 +39,7 @@
                "MethodName":"Company",
                "Synopsis":"Get company identity profile",
                "HTTPMethod":"GET",
-               "URI":"/identity/companies",
+               "URI":"/identity/companies/:company_id/company_info",
                "RequiresOAuth":"N",
                "parameters":[
                ]
@@ -48,7 +48,7 @@
                "MethodName":"Clinic",
                "Synopsis":"Get clinic identity profile",
                "HTTPMethod":"GET",
-               "URI":"/identity/clinics/:clinic_id",
+               "URI":"/identity/clinics/:clinic_id/clinic_info",
                "RequiresOAuth":"N",
                "parameters":[
                   {
@@ -275,7 +275,7 @@
                "MethodName":"Update Patient",
                "Synopsis":"Update patient info",
                "HTTPMethod":"PUT",
-               "URI":"/identity/patients",
+               "URI":"/identity/patients/:patient_id/update",
                "RequiresOAuth":"N",
                "parameters":[
                   {
@@ -333,7 +333,7 @@
                "MethodName":"Update Provider",
                "Synopsis":"Update provider info",
                "HTTPMethod":"PUT",
-               "URI":"/identity/providers",
+               "URI":"/identity/providers/:provider_id/update",
                "RequiresOAuth":"N",
                "parameters":[
                   {
@@ -419,20 +419,27 @@
                "MethodName":"Update Company",
                "Synopsis":"Update company info",
                "HTTPMethod":"PUT",
-               "URI":"/identity/companies",
+               "URI":"/identity/companies/:company_id/update",
                "RequiresOAuth":"N",
                "parameters":[
+                  {
+                     "Name":"company_id",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Company ID" 
+                  }
                ]
             },
             {
                "MethodName":"Update Clinic",
                "Synopsis":"Update clinic info",
                "HTTPMethod":"PUT",
-               "URI":"/identity/clinics",
+               "URI":"/identity/clinics/clinic_id/update",
                "RequiresOAuth":"N",
                "parameters":[
                   {
-                     "Name":"id",
+                     "Name":"clinic_id",
                      "Required":"Y",
                      "Default":"1",
                      "Type":"string",
@@ -504,10 +511,10 @@
                ]
             },
             {
-               "MethodName":"Delete Patient",
+               "MethodName":"Deactivate Patient",
                "Synopsis":"Innactivate a patient",
                "HTTPMethod":"DELETE",
-               "URI":"/identity/patients",
+               "URI":"/identity/patients/:patient_id/deactivate",
                "RequiresOAuth":"N",
                "parameters":[
                   {
@@ -520,10 +527,10 @@
                ]
             },
             {
-               "MethodName":"Delete Provider",
+               "MethodName":"Deactivate Provider",
                "Synopsis":"Innactivate a provider",
                "HTTPMethod":"DELETE",
-               "URI":"/identity/providers",
+               "URI":"/identity/providers/:provider_id/deactivate",
                "RequiresOAuth":"N",
                "parameters":[
                   {
@@ -536,19 +543,26 @@
                ]
             },
             {
-               "MethodName":"Delete Company",
+               "MethodName":"Deactivate Company",
                "Synopsis":"Innactivate a company",
                "HTTPMethod":"DELETE",
-               "URI":"/identity/companies",
+               "URI":"/identity/companies/:company_id/deactivate",
                "RequiresOAuth":"N",
                "parameters":[
+                  {
+                     "Name":"company_id",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Company ID" 
+                  }
                ]
             },
             {
-               "MethodName":"Delete Clinic",
+               "MethodName":"Deactivate Clinic",
                "Synopsis":"Innactivate a clinic",
                "HTTPMethod":"DELETE",
-               "URI":"/identity/clinics",
+               "URI":"/identity/clinics/:clinic_id/deactivate",
                "RequiresOAuth":"N",
                "parameters":[
                   {
