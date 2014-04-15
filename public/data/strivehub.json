@@ -7,7 +7,7 @@
                "MethodName":"Patient",
                "Synopsis":"Get patient identity profile",
                "HTTPMethod":"GET",
-               "URI":"/identity/patients/:patient_id/patient_info",
+               "URI":"/identity/patients/:patient_id/profile",
                "RequiresOAuth":"N",
                "parameters":[
                   {
@@ -23,7 +23,7 @@
                "MethodName":"Provider",
                "Synopsis":"Get provider identity profile",
                "HTTPMethod":"GET",
-               "URI":"/identity/providers/:provider_id/provider_info",
+               "URI":"/identity/providers/:provider_id/profile",
                "RequiresOAuth":"N",
                "parameters":[
                   {
@@ -39,7 +39,7 @@
                "MethodName":"Company",
                "Synopsis":"Get company identity profile",
                "HTTPMethod":"GET",
-               "URI":"/identity/companies/:company_id/company_info",
+               "URI":"/identity/companies/:company_id/profile",
                "RequiresOAuth":"N",
                "parameters":[
                ]
@@ -48,7 +48,7 @@
                "MethodName":"Clinic",
                "Synopsis":"Get clinic identity profile",
                "HTTPMethod":"GET",
-               "URI":"/identity/clinics/:clinic_id/clinic_info",
+               "URI":"/identity/clinics/:clinic_id/profile",
                "RequiresOAuth":"N",
                "parameters":[
                   {
@@ -435,7 +435,7 @@
                "MethodName":"Update Clinic",
                "Synopsis":"Update clinic info",
                "HTTPMethod":"PUT",
-               "URI":"/identity/clinics/clinic_id/update",
+               "URI":"/identity/clinics/:clinic_id/update",
                "RequiresOAuth":"N",
                "parameters":[
                   {
