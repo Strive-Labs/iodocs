@@ -6,3 +6,4 @@ pids/*
 dump.rdb
 err.log
 out.log
+npm-debug.log

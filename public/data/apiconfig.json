@@ -16,5 +16,39 @@
         "privatePath": "",
         "auth": "key",
         "keyParam": "api_key"
+    },
+    "strivehub-oauth2": {
+        "name": "StriveHub oAuth2 API",
+        "protocol": "http",
+        "baseURL": "http://www.theravidoauth2server.com",
+        "publicPath": "",
+        "privatePath": "",
+        "auth": "oauth2",
+        "oauth2": {
+            "type": "authorization-code",
+            "baseSite": "http://www.theravidoauth2server.com/",
+            "authorizeURL": "authorize.php",
+            "accessTokenURL": "token.php",
+            "tokenName": "oauth_token",
+            "authorizationHeader":"N"
+        },
+        "keyParam":""
+    },
+    "foursquare": {
+        "name": "Foursquare (OAuth 2.0 Auth Code)",
+        "protocol": "https",
+        "baseURL": "api.foursquare.com",
+        "publicPath": "",
+        "privatePath": "/v2",
+        "auth": "oauth2",
+        "oauth2": {
+            "type": "authorization-code",
+            "baseSite": "https://foursquare.com/",
+            "authorizeURL": "oauth2/authenticate",
+            "accessTokenURL": "oauth2/access_token",
+            "tokenName": "oauth_token",
+            "authorizationHeader":"N"
+        },
+        "keyParam":""
     }
 }
